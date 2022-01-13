@@ -7,11 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>732</width>
-    <height>498</height>
+    <height>380</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Salario</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Recursos.qrc">
+    <normaloff>:/Recursos/salario.png</normaloff>:/Recursos/salario.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -234,6 +238,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
  <connections/>
 </ui>
