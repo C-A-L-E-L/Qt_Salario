@@ -10,11 +10,15 @@ CONFIG += c++11
 
 SOURCES += \
     acerca.cpp \
+    controlador.cpp \
     main.cpp \
+    obrero.cpp \
     salario.cpp
 
 HEADERS += \
     acerca.h \
+    controlador.h \
+    obrero.h \
     salario.h
 
 FORMS += \
