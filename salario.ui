@@ -93,7 +93,7 @@
              <number>2</number>
             </property>
             <property name="value">
-             <number>8</number>
+             <number>0</number>
             </property>
            </widget>
           </item>
@@ -189,11 +189,11 @@
               <weight>75</weight>
               <italic>true</italic>
               <bold>true</bold>
-              <underline>true</underline>
+              <underline>false</underline>
              </font>
             </property>
             <property name="text">
-             <string>Calcular</string>
+             <string>&amp;Calcular</string>
             </property>
            </widget>
           </item>
@@ -251,7 +251,7 @@
    </property>
    <widget class="QMenu" name="menuArchivo">
     <property name="title">
-     <string>Archivo</string>
+     <string>&amp;Archivo</string>
     </property>
     <addaction name="actionNuevo"/>
     <addaction name="actionAbrir"/>
@@ -263,7 +263,7 @@
    </widget>
    <widget class="QMenu" name="menuAyuda">
     <property name="title">
-     <string>Ayuda</string>
+     <string>Ay&amp;uda</string>
     </property>
     <addaction name="actionAcerca_de_Salario"/>
    </widget>
@@ -273,32 +273,47 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNuevo">
    <property name="text">
-    <string>Nuevo </string>
+    <string>&amp;Nuevo </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
    </property>
   </action>
   <action name="actionAbrir">
    <property name="text">
-    <string>Abrir</string>
+    <string>&amp;Abrir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
    </property>
   </action>
   <action name="actionGuardar">
    <property name="text">
-    <string>Guardar</string>
+    <string>&amp;Guardar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
    </property>
   </action>
   <action name="actionCalcular">
    <property name="text">
-    <string>Calcular</string>
+    <string>&amp;Calcular</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
    </property>
   </action>
   <action name="actionSalir">
    <property name="text">
-    <string>Salir</string>
+    <string>&amp;Salir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
    </property>
   </action>
   <action name="actionAcerca_de_Salario">
    <property name="text">
-    <string>Acerca de Salario</string>
+    <string>&amp;Acerca de Salario</string>
    </property>
   </action>
  </widget>
