@@ -79,10 +79,9 @@ void Salario::guardar()
 {
     // Abrir cuadro de dialogo para selecionar nombre y ubicación del archivo
     QString nombreArchivo = QFileDialog::getSaveFileName(this,
-                                                         "GUARDAR DATOS", // Nombre
+                                                         "GUARDAR ARCHIVO", // Nombre
                                                          QDir::home().absolutePath(), // Donde empiece el cuadro de dialogo
-                                                         "Archivos de texto (*.txt)"); // [Filtro] tipo de documento
-    qDebug() << nombreArchivo;
+                                                         "Archivos de salario (*.slr)"); // [Filtro] tipo de documento
     // Crear un obj QFile
     QFile archivo(nombreArchivo);
     // Abrirlo para escritura
@@ -97,7 +96,37 @@ void Salario::guardar()
         // Mensaje de error si no s epeude abrir el archivo
         QMessageBox::warning(this,
                              "GUARDAR",
-                             "No se logro salvar los datos");
+                             "No se logro salvar el archivo");
+    }
+    // Cerrar el archivo
+    archivo.close();
+}
+
+void Salario::abrir()
+{
+    // Abrir cuadro de dialogo para selecionar nombre y ubicación del archivo
+    QString nombreArchivo = QFileDialog::getOpenFileName(this,
+                                                         "ABRIR ARCHIVO", // Nombre
+                                                         QDir::home().absolutePath(), // Donde empiece el cuadro de dialogo
+                                                         "Archivos de salario (*.slr)"); // [Filtro] tipo de documento
+    // Crear un obj QFile
+    QFile archivo(nombreArchivo);
+    // Abrirlo para lectura
+    if(archivo.open(QFile::ReadOnly)){
+        // Crear stream [Flujo de texto]
+        QTextStream entrada(&archivo);
+        // Leer  rodo el contenido del archivo
+        QString datos = entrada.readAll();
+        // Cargar el contenido al area texto
+        ui->outResultado->clear();
+        ui->outResultado->setPlainText(datos);
+        // MOstrar por 5 seg que todo salio bien
+        ui->statusbar->showMessage("Datos leidos desde " + nombreArchivo,5000);
+    }else{
+        // Mensaje de error si no s epeude abrir el archivo
+        QMessageBox::warning(this,
+                             "ABRIR ARCHIVOS",
+                             "No se puede abrir el archivo");
     }
     // Cerrar el archivo
     archivo.close();
@@ -119,3 +148,7 @@ void Salario::on_actionNuevo_triggered()
     ui->outResultado->clear();
 }
 
+void Salario::on_actionAbrir_triggered()
+{
+    abrir();
+}

@@ -29,11 +29,14 @@ private slots:
 
     void on_actionNuevo_triggered();
 
+    void on_actionAbrir_triggered();
+
 private:
     Ui::Salario *ui;
     Controlador *m_controlador;
     void limpiar();
     void calcular();
     void guardar();
+    void abrir();
 };
 #endif // SALARIO_H
