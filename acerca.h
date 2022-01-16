@@ -15,8 +15,16 @@ public:
     explicit Acerca(QWidget *parent = nullptr);
     ~Acerca();
 
+    void setVersion(const QString &newVersion);
+
+    const QString &version() const;
+
+    int valor() const;
+
 private:
     Ui::Acerca *ui;
+    QString m_version;
+    int m_valor;
 };
 
 #endif // ACERCA_H

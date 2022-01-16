@@ -152,3 +152,15 @@ void Salario::on_actionAbrir_triggered()
 {
     abrir();
 }
+
+void Salario::on_actionAcerca_de_Salario_triggered()
+{
+    // Crear un obj de la ventama que deseamos invocar
+    Acerca *dialogo = new Acerca(this);
+    // Enviar parametro a la ventana
+    dialogo->setVersion(VERSION);
+    // Mostrar la ventana [dialogo->show();]
+    dialogo->exec();
+    // Obtener datos de la ventana
+    qDebug() << dialogo->valor();
+}

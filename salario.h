@@ -7,6 +7,9 @@
 #include <QDebug>
 
 #include "controlador.h"
+#include "acerca.h"
+
+#define VERSION "1.0"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Salario; }
@@ -30,6 +33,8 @@ private slots:
     void on_actionNuevo_triggered();
 
     void on_actionAbrir_triggered();
+
+    void on_actionAcerca_de_Salario_triggered();
 
 private:
     Ui::Salario *ui;
