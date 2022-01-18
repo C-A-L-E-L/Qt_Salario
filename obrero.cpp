@@ -97,7 +97,6 @@ QString Obrero::jornada2String()
     default:
         return "";
     }
-
 }
 
 Obrero::Obrero(const QString &nombre, int horas, TipoJornada jornada) : m_nombre(nombre),

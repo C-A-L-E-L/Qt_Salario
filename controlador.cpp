@@ -41,6 +41,7 @@ bool Controlador::calcularSalario()
     // Calculo de horas extras
     int horas = m_obrero->horas();
     int horasExtra = 0;
+
     if (m_obrero->horas() > 40){
         horasExtra = m_obrero->horas() - 40;
         horas = 40;

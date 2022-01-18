@@ -8,7 +8,6 @@ enum class TipoJornada // Enumerador [Estructura que permite definir diferentes 
     Matutina,
     Vespertina,
     Nocturna
-
 };
 
 class Obrero : public QObject
