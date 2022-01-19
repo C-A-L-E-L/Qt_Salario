@@ -73,9 +73,9 @@ QString Obrero::tostring()
     str.append("Nombre: " + m_nombre + "\n");
     str.append("Jornada: " + jornada2String() + "\n");
     str.append("Horas: " + QString::number(m_horas) + "\n"); // Nueva forma de convertir un double a un string [QString::number(horas)]
-    str.append("Salario Bruto: $" + QString::number(m_salarioBruto) + "\n");
-    str.append("Descuento: $" + QString::number(m_descuento) + "\n");
-    str.append("Salario Neto: $" + QString::number(m_salarioNeto) + "\n");
+    str.append("Salario Bruto: $" + QString::number(m_salarioBruto, 'f', 2) + "\n");
+    str.append("Descuento: $" + QString::number(m_descuento, 'f', 2) + "\n");
+    str.append("Salario Neto: $" + QString::number(m_salarioNeto, 'f', 2) + "\n");
     return str;
 }
 

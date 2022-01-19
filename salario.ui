@@ -287,7 +287,7 @@
               </widget>
              </item>
              <item row="1" column="0">
-              <widget class="QLabel" name="outTotalN">
+              <widget class="QLabel" name="label_5">
                <property name="font">
                 <font>
                  <pointsize>11</pointsize>
@@ -301,7 +301,7 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QLabel" name="label_7">
+              <widget class="QLabel" name="outTotalN">
                <property name="font">
                 <font>
                  <pointsize>11</pointsize>
@@ -316,7 +316,7 @@
               </widget>
              </item>
              <item row="2" column="0">
-              <widget class="QLabel" name="ouTotalIVA">
+              <widget class="QLabel" name="label_4">
                <property name="font">
                 <font>
                  <pointsize>11</pointsize>
@@ -325,12 +325,12 @@
                 </font>
                </property>
                <property name="text">
-                <string>Total IVA:</string>
+                <string>Total IESS:</string>
                </property>
               </widget>
              </item>
              <item row="2" column="1">
-              <widget class="QLabel" name="label_8">
+              <widget class="QLabel" name="outTotalIESS">
                <property name="font">
                 <font>
                  <pointsize>11</pointsize>
@@ -399,7 +399,7 @@
     <string>&amp;Abrir</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+A</string>
+    <string>Ctrl+O</string>
    </property>
   </action>
   <action name="actionGuardar">
@@ -407,7 +407,7 @@
     <string>&amp;Guardar</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+G</string>
+    <string>Ctrl+S</string>
    </property>
   </action>
   <action name="actionCalcular">

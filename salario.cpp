@@ -27,6 +27,10 @@ void Salario::limpiar()
     ui->inMatutina->setChecked(true);
     // Regresa el cursor
     ui->inNombre->setFocus();
+    // Limpiar las salidas de totales
+    ui->outTotalB->setText("0");
+    ui->outTotalIESS->setText("0");
+    ui->outTotalN->setText("0");
 }
 
 void Salario::calcular()
@@ -135,6 +139,9 @@ void Salario::abrir()
 void Salario::on_actionCalcular_triggered()
 {
     calcular();
+    ui->outTotalB->setText(QString::number(m_controlador->m_totalBruto,'f',2));
+    ui->outTotalIESS->setText(QString::number(m_controlador->m_totalIESS));
+    ui->outTotalN->setText(QString::number(m_controlador->m_totalNeto,'f',2));
 }
 
 void Salario::on_actionGuardar_triggered()
