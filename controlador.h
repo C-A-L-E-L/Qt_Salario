@@ -25,13 +25,6 @@ public:
     float m_totalIESS;
     float m_totalNeto;
 
-    float totalBruto() const;
-    void setTotalBruto(float newTotalBruto);
-    float totalIESS() const;
-    void setTotalIESS(float newTotalIESS);
-    float totalNeto() const;
-    void setTotalNeto(float newTotalNeto);
-
 signals:
 
 private:
