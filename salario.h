@@ -9,7 +9,7 @@
 #include "controlador.h"
 #include "acerca.h"
 
-#define VERSION "1.0"
+#define VERSION "1.1.01"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Salario; }
@@ -43,5 +43,6 @@ private:
     void calcular();
     void guardar();
     void abrir();
+    void totales();
 };
 #endif // SALARIO_H
