@@ -17,6 +17,7 @@ Salario::~Salario()
 void Salario::on_cmdCalcular_clicked()
 {
     calcular();
+    totales();
 }
 
 void Salario::limpiar()
@@ -94,6 +95,10 @@ void Salario::guardar()
         QTextStream salida(&archivo);
         // Enviar los datos del resultado a la salida
         salida << ui->outResultado->toPlainText();
+        salida << "\n **** TOTALES A PAGAR ****\n";
+        salida << "\nS.Bruto Total: " << ui->outTotalB->text();
+        salida << "\nS.alariosNeto: " << ui->outTotalN->text();
+        salida << "\nTotal IESS: " << ui->outTotalIESS->text();
         // MOstrar por 5 seg que todo salio bien
         ui->statusbar->showMessage("Datos almacenados en " + nombreArchivo,5000);
     }else{
@@ -136,12 +141,17 @@ void Salario::abrir()
     archivo.close();
 }
 
+void Salario::totales()
+{
+    ui->outTotalB->setText(QString::number(m_controlador->m_totalBruto,'f',2));
+    ui->outTotalIESS->setText(QString::number(m_controlador->m_totalIESS,'f',2));
+    ui->outTotalN->setText(QString::number(m_controlador->m_totalNeto,'f',2));
+}
+
 void Salario::on_actionCalcular_triggered()
 {
     calcular();
-    ui->outTotalB->setText(QString::number(m_controlador->m_totalBruto,'f',2));
-    ui->outTotalIESS->setText(QString::number(m_controlador->m_totalIESS));
-    ui->outTotalN->setText(QString::number(m_controlador->m_totalNeto,'f',2));
+    totales();
 }
 
 void Salario::on_actionGuardar_triggered()
