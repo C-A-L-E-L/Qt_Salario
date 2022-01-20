@@ -97,8 +97,8 @@ void Salario::guardar()
         salida << ui->outResultado->toPlainText();
         salida << "\n **** TOTALES A PAGAR ****\n";
         salida << "\nS.Bruto Total: " << ui->outTotalB->text();
-        salida << "\nS.alariosNeto: " << ui->outTotalN->text();
         salida << "\nTotal IESS: " << ui->outTotalIESS->text();
+        salida << "\nS.alariosNeto: " << ui->outTotalN->text();
         // MOstrar por 5 seg que todo salio bien
         ui->statusbar->showMessage("Datos almacenados en " + nombreArchivo,5000);
     }else{
